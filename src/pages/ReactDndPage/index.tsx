@@ -51,7 +51,7 @@ const list: ItemProps[] = [
   { id: nanoid(), text: "Item 8", color: "#9254DE" },
 ];
 
-function UpAndDown() {
+function ReactDndPage() {
   const [items, setItems] = useState(list);
 
   const handleReset = () => {
@@ -71,4 +71,4 @@ function UpAndDown() {
   );
 }
 
-export default UpAndDown;
+export default ReactDndPage;
