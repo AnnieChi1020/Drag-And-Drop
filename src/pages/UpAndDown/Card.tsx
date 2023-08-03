@@ -19,7 +19,6 @@ const Container = styled.div<{
 `;
 
 const Text = styled.span`
-  font-family: Helvetica, "PingFang TC", "微軟正黑體", sans-serif;
   font-size: 20px;
   line-height: 24px;
   color: #fff;

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import List from "./List";
 import { styled } from "styled-components";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
+import List from "./List";
 import { nanoid } from "nanoid";
 
 const Container = styled.div`
@@ -51,7 +49,7 @@ const list: ItemProps[] = [
   { id: nanoid(), text: "Item 8", color: "#9254DE" },
 ];
 
-function UpAndDown() {
+const ReactBeautifulDndPage = () => {
   const [items, setItems] = useState(list);
 
   const handleReset = () => {
@@ -59,16 +57,14 @@ function UpAndDown() {
   };
 
   return (
-    <DndProvider backend={HTML5Backend}>
-      <Container>
-        <TopRowContainer>
-          <Title>Drag and Drop (react-dnd)</Title>
-          <Button onClick={handleReset}>Reset</Button>
-        </TopRowContainer>
-        <List items={items} setItems={setItems} />
-      </Container>
-    </DndProvider>
+    <Container>
+      <TopRowContainer>
+        <Title>Drag and Drop (react-beautiful-dnd)</Title>
+        <Button onClick={handleReset}>Reset</Button>
+      </TopRowContainer>
+      <List items={items} setItems={setItems} />
+    </Container>
   );
-}
+};
 
-export default UpAndDown;
+export default ReactBeautifulDndPage;
