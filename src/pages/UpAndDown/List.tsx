@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useCallback } from "react";
 import Card from "./Card";
 import { styled } from "styled-components";
+import { ItemProps } from ".";
 
 const Container = styled.div`
   display: flex;
@@ -9,18 +10,40 @@ const Container = styled.div`
 `;
 
 interface ListProps {
-  list: { id: number; text: string }[];
+  items: ItemProps[];
+  setItems: React.Dispatch<React.SetStateAction<ItemProps[]>>;
 }
 
-const List: React.FC<ListProps> = (props) => {
-  const { list } = props;
+function List(props: ListProps) {
+  const { items, setItems } = props;
+
+  const moveListItem = useCallback(
+    (dragIndex: number, hoverIndex: number) => {
+      const dragItem = items[dragIndex];
+      const hoverItem = items[hoverIndex];
+      setItems((items) => {
+        const updatedItems = [...items];
+        updatedItems[dragIndex] = hoverItem;
+        updatedItems[hoverIndex] = dragItem;
+        return updatedItems;
+      });
+    },
+    [items]
+  );
+
   return (
     <Container>
-      {list.map((item, i) => (
-        <Card text={item.text} key={i} />
+      {items.map((item, index) => (
+        <Card
+          text={item.text}
+          color={item.color}
+          key={item.id}
+          moveListItem={moveListItem}
+          index={index}
+        />
       ))}
     </Container>
   );
-};
+}
 
 export default List;
