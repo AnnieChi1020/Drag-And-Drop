@@ -1,14 +1,15 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
+import paths from "../constants/paths";
 
 const navItems = [
-  { label: "Drag and Drop (react-dnd)", path: "/react-dnd" },
+  { label: "Drag and Drop (react-dnd)", path: paths.REACT_DND },
   {
     label: "Drag and Drop (react-beautiful-dnd)",
-    path: "/react-beautiful-dnd",
+    path: paths.REACT_BEAUTIFUL_DND,
   },
-  { label: "Drag and Drop (JS only)", path: "/js-only" },
+  { label: "Drag and Drop (JS only)", path: paths.JS_ONLY },
 ];
 
 const Container = styled.div``;
