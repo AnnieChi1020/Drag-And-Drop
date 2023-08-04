@@ -13,7 +13,7 @@ const Container = styled.div<{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* opacity: ${({ $isDragging }) => ($isDragging ? 0.5 : 1)}; */
+  opacity: ${({ $isDragging }) => ($isDragging ? 0.5 : 1)};
 `;
 
 const Text = styled.span`
