@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
 import Card from "./Card";
 import { styled } from "styled-components";
-import { ItemProps } from ".";
+import { ItemProps } from "../../constants/list";
 
 const Container = styled.div`
   display: flex;

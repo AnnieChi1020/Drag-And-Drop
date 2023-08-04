@@ -1,9 +1,9 @@
 import React from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import { ItemProps } from ".";
 import { styled } from "styled-components";
 import Card from "./Card";
 import { types } from "../../types";
+import { ItemProps } from "../../constants/list";
 
 const Container = styled.div`
   display: flex;
