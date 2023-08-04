@@ -10,6 +10,7 @@ const navItems = [
     path: paths.REACT_BEAUTIFUL_DND,
   },
   { label: "Drag and Drop (JS only)", path: paths.JS_ONLY },
+  { label: "Drag and Drop (Buttons) ", path: paths.BUTTONS },
 ];
 
 const Container = styled.div``;
