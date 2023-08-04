@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ReactDndPage from "./pages/ReactDndPage";
 import Layout from "./components/Layout";
 import ReactBeautifulDndPage from "./pages/ReactBeautifulDndPage";
+import JSOnlyPage from "./pages/JSOnlyPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             path="/react-beautiful-dnd"
             element={<ReactBeautifulDndPage />}
           />
+          <Route path="/js-only" element={<JSOnlyPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>
