@@ -30,8 +30,10 @@ function List(props: ListProps) {
       return newItems;
     });
 
+    const cards = document.querySelectorAll(".card");
+
     window.scrollTo({
-      top: e.currentTarget.offsetTop - 248,
+      top: cards[index - 1].getBoundingClientRect().top + window.scrollY,
     });
   };
 
@@ -48,8 +50,10 @@ function List(props: ListProps) {
       return newItems;
     });
 
+    const cards = document.querySelectorAll(".card");
+
     window.scrollTo({
-      top: e.currentTarget.offsetTop + 248,
+      top: cards[index + 1].getBoundingClientRect().top + window.scrollY,
     });
   };
 

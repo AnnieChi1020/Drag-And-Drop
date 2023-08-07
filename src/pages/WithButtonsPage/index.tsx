@@ -4,7 +4,6 @@ import { styled } from "styled-components";
 import { list } from "../../constants/list";
 
 const Container = styled.div`
-  padding: 500px 0;
   max-width: 600px;
   margin: auto;
   font-family: Helvetica, "PingFang TC", "微軟正黑體", sans-serif;

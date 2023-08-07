@@ -55,7 +55,7 @@ function Card(props: CardProps) {
   const { text, index, color, handleMoveUp, handleMoveDown } = props;
 
   return (
-    <Container $backgroundColor={color}>
+    <Container $backgroundColor={color} className="card">
       <Text>{text}</Text>
       <ButtonsContainer>
         <Button onClick={(e) => handleMoveUp(e, index)}>Up</Button>
