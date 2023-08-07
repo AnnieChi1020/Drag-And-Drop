@@ -17,10 +17,7 @@ interface ListProps {
 function List(props: ListProps) {
   const { items, setItems } = props;
 
-  const handleMoveUp = (
-    e: React.MouseEvent<HTMLButtonElement>,
-    index: number
-  ) => {
+  const handleMoveUp = (index: number) => {
     if (index === 0) return;
 
     setItems((prev) => {
@@ -37,10 +34,7 @@ function List(props: ListProps) {
     });
   };
 
-  const handleMoveDown = (
-    e: React.MouseEvent<HTMLButtonElement>,
-    index: number
-  ) => {
+  const handleMoveDown = (index: number) => {
     if (index === items.length - 1) return;
 
     setItems((prev) => {

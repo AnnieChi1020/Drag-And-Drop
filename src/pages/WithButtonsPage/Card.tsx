@@ -44,11 +44,8 @@ interface CardProps {
   text: string;
   index: number;
   color: string;
-  handleMoveUp: (e: React.MouseEvent<HTMLButtonElement>, index: number) => void;
-  handleMoveDown: (
-    e: React.MouseEvent<HTMLButtonElement>,
-    index: number
-  ) => void;
+  handleMoveUp: (index: number) => void;
+  handleMoveDown: (index: number) => void;
 }
 
 function Card(props: CardProps) {
@@ -58,8 +55,8 @@ function Card(props: CardProps) {
     <Container $backgroundColor={color} className="card">
       <Text>{text}</Text>
       <ButtonsContainer>
-        <Button onClick={(e) => handleMoveUp(e, index)}>Up</Button>
-        <Button onClick={(e) => handleMoveDown(e, index)}>Down</Button>
+        <Button onClick={() => handleMoveUp(index)}>Up</Button>
+        <Button onClick={() => handleMoveDown(index)}>Down</Button>
       </ButtonsContainer>
     </Container>
   );
