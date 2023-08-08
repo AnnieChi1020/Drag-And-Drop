@@ -56,12 +56,12 @@ function Card(props: CardProps) {
 
       if (!hoverBoundingRect) return;
 
-      // hover item 的 1/2 高度 :)
+      // hover item 的 1/2 高度
       const hoverMiddleY =
         (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
       const hoverActualY = monitor.getClientOffset().y - hoverBoundingRect.top;
 
-      // 如果 drag item 是被向下拖曳，且 hover 到的位置不及 drag item 的 1/2，不做任何事 :(
+      // 如果 drag item 是被向下拖曳，且 hover 到的位置不及 drag item 的 1/2，不做任何事
       if (dragIndex < hoverIndex && hoverActualY < hoverMiddleY) return;
       // 如果 drag item 是被向上拖曳，且 hover 到的位置不及 drag item 的 1/2，不做任何事
       if (dragIndex > hoverIndex && hoverActualY > hoverMiddleY) return;
