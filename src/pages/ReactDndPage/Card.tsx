@@ -56,7 +56,7 @@ function Card(props: CardProps) {
 
       if (!hoverBoundingRect) return;
 
-      // hover item 的 1/2 高度 :)
+      // hover item 的 1/2 高度
       const hoverMiddleY =
         (hoverBoundingRect.bottom - hoverBoundingRect.top) / 2;
       const hoverActualY = monitor.getClientOffset().y - hoverBoundingRect.top;
